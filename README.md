@@ -2,7 +2,7 @@
 
 A clean, mathematically grounded implementation of a Variational Autoencoder (VAE) and $\beta$-VAE in PyTorch, trained on the Fashion-MNIST dataset. This repository focuses on a technically precise implementation of the Evidence Lower Bound (ELBO) loss and the reparameterization trick.
 
-## 🧠 Model Architecture
+##  Model Architecture
 
 ![VAE Architecture](assets/vae_arch.png)
 *Place your architecture diagram here (e.g., `assets/vae_arch.png`).*
@@ -14,7 +14,7 @@ The model is composed of two probabilistic networks designed to map high-dimensi
 * **Reparameterization Trick:** Enables backpropagation through the stochastic sampling layer. We compute $z = \mu + \sigma \odot \epsilon$, where $\epsilon$ is fixed noise sampled from $\mathcal{N}(0, I)$.
 * **Decoder :** Reconstructs the image from the latent sample $z$. It uses a **Sigmoid** activation function to output pixel probabilities, treating the normalized pixel values as Bernoulli distributions.
 
-## 📉 Training Process & Objective
+## Training Process & Objective
 
 The model is trained to maximize the **Evidence Lower Bound (ELBO)** by minimizing the **Negative ELBO**.
 
@@ -30,7 +30,7 @@ $$\mathcal{L} = \text{BCE}(x, \hat{x}) + \beta \cdot D_{KL}(q(z|x) \| p(z))$$
     * $\beta > 1.0$: Enforces stronger disentanglement of latent factors (at the cost of some reconstruction quality).
 * **Optimization:** Trained using the **Adam** optimizer (lr=1e-3). Convergence on Fashion-MNIST typically occurs within 50–100 epochs as the ELBO plateaus.
 
-## 🛠️ Installation
+##  Installation
 
 1.  Clone the repository:
     ```bash
@@ -43,7 +43,7 @@ $$\mathcal{L} = \text{BCE}(x, \hat{x}) + \beta \cdot D_{KL}(q(z|x) \| p(z))$$
     pip install -r requirements.txt
     ```
 
-## 🚀 Usage
+##  Usage
 
 To train the model from scratch:
 
