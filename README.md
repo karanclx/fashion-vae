@@ -9,10 +9,10 @@ A clean, mathematically grounded implementation of a Variational Autoencoder (VA
 
 The model is composed of two probabilistic networks designed to map high-dimensional data to a continuous latent manifold.
 
-* **Encoder ($q_\phi(z|x)$):** Maps $28 \times 28$ grayscale inputs to a latent distribution. Instead of a single vector, it predicts a **mean ($\mu$)** and **log-variance ($\log\sigma^2$)** for each latent dimension.
+* **Encoder :** Maps $28 \times 28$ grayscale inputs to a latent distribution. Instead of a single vector, it predicts a **mean ($\mu$)** and **log-variance ($\log\sigma^2$)** for each latent dimension.
 * **Latent Space:** Modeled as a multivariate Gaussian distribution.
 * **Reparameterization Trick:** Enables backpropagation through the stochastic sampling layer. We compute $z = \mu + \sigma \odot \epsilon$, where $\epsilon$ is fixed noise sampled from $\mathcal{N}(0, I)$.
-* **Decoder ($p_\theta(x|z)$):** Reconstructs the image from the latent sample $z$. It uses a **Sigmoid** activation function to output pixel probabilities, treating the normalized pixel values as Bernoulli distributions.
+* **Decoder :** Reconstructs the image from the latent sample $z$. It uses a **Sigmoid** activation function to output pixel probabilities, treating the normalized pixel values as Bernoulli distributions.
 
 ## 📉 Training Process & Objective
 
