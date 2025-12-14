@@ -5,7 +5,7 @@ A clean, mathematically grounded implementation of a Variational Autoencoder (VA
 ##  Model Architecture
 
 ![VAE Architecture](assets/vae_arch.png)
-*Place your architecture diagram here (e.g., `assets/vae_arch.png`).*
+
 
 The model is composed of two probabilistic networks designed to map high-dimensional data to a continuous latent manifold.
 
